@@ -19,12 +19,15 @@ var GridLayout = React.createClass({
     var col = this.props.col;
     var imgBoxArr = [];
     var bootstrapColWidth = 12/this.props.col;
+    // Image height and weight to be based on bootstrap col width
     var imgHeight = 200*bootstrapColWidth;
     var imgWidth = 200*bootstrapColWidth;
     var imgCollections = ['nature','buildings','food','people','technology','objects'];
+    var imgEffects = ['tilt','hue','bw','morph','sepia'];
+    var len = imgEffects.length;
     for (let i = 0; i < row*col ;i++) {
       let imgUrl = 'https://source.unsplash.com/category/'+ imgCollections[(i%6)] +'/'+ imgHeight + 'x' + imgWidth;
-      imgBoxArr.push(<ImgBox keyId={i} colWidth={bootstrapColWidth} imgUrl={imgUrl}/>);
+      imgBoxArr.push(<ImgBox keyId={i} hoverEffect={imgEffects[(i%len)]} colWidth={bootstrapColWidth} imgUrl={imgUrl}/>);
     }
     return (
       <div className="row">
@@ -36,7 +39,7 @@ var GridLayout = React.createClass({
 
 var ImgBox = React.createClass({
   render: function(){
-    var classProperty = "col-xs-" + this.props.colWidth + ' photo-holder';
+    var classProperty = "col-xs-" + this.props.colWidth + ' photo-holder ' +this.props.hoverEffect;
     var imgUrl = this.props.imgUrl;
     return (
       <div className={classProperty} id={this.props.keyId}>

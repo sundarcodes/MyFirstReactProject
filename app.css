@@ -1,18 +1,43 @@
 .photo-holder{
   padding-left: 2px;
   padding-right: 2px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;  
+  -webkit-transition: all 0.75s ease;
+     -moz-transition: all 0.75s ease;
+       -o-transition: all 0.75s ease;
+      -ms-transition: all 0.75s ease;
+          transition: all 0.75s ease;  
 }
 
-.photo-holder:hover {
+.tilt:hover {
   -webkit-transform: rotate(-10deg);
      -moz-transform: rotate(-10deg);
        -o-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
           transform: rotate(-10deg);
+}
+
+
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.bw:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.hue:hover {
+  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+}
+
+.sepia:hover {
+  filter: sepia(75%);
+  -webkit-filter: sepia(75%);
 }
 
