@@ -1,4 +1,5 @@
-
+// Please note this uses bootstrap grid layout. So make sure you give column with
+// respect to the bootstrap grid format
 var Gallery = React.createClass({
   render: function(){
     return (
