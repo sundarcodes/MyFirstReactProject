@@ -3,7 +3,10 @@ var Gallery = React.createClass({
   render: function(){
     return (
       <div className="container-fluid">
-        <FlatLayout row="6" col="6"/>
+        <FlatLayout row="1" col="3"/>
+        <FlatLayout row="1" col="6"/>
+        <FlatLayout row="1" col="2"/>
+        <FlatLayout row="1" col="4"/>
       </div>
       );
   }
@@ -15,8 +18,8 @@ var FlatLayout = React.createClass({
     var col = this.props.col;
     var imgBoxArr = [];
     var bootstrapColWidth = 12/this.props.col;
-    var imgHeight = 300;
-    var imgWidth = 300;
+    var imgHeight = 1500;
+    var imgWidth = 1500;
     var imgCollections = ['nature','buildings','food','people','technology','objects'];
     for (let i = 0; i < row*col ;i++) {
       let imgUrl = 'https://source.unsplash.com/category/'+ imgCollections[(i%6)] +'/'+ imgHeight + 'x' + imgWidth;
