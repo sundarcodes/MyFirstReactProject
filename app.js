@@ -4,16 +4,16 @@ var Gallery = React.createClass({
   render: function(){
     return (
       <div className="container-fluid">
-        <FlatLayout row="1" col="3"/>
-        <FlatLayout row="1" col="6"/>
-        <FlatLayout row="1" col="2"/>
-        <FlatLayout row="1" col="4"/>
+        <GridLayout row="1" col="3"/>
+        <GridLayout row="1" col="6"/>
+        <GridLayout row="1" col="2"/>
+        <GridLayout row="1" col="4"/>
       </div>
       );
   }
 });
 
-var FlatLayout = React.createClass({
+var GridLayout = React.createClass({
   render: function(){
     var row = this.props.row;
     var col = this.props.col;
